@@ -187,9 +187,9 @@ DETAIL:  Failing row contains (Die Hard, 1988, action, Johnny, 132).
 
 16. List three ways to use the schema to restrict what values can be stored in a column.
 
-  1. Data type (which can include a length limitation)
-  2. NOT NULL Constraint
-  3. Check Constraint
+  * Data type (which can include a length limitation)
+  * NOT NULL Constraint
+  * Check Constraint
 
 ---
 
