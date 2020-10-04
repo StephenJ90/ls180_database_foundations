@@ -45,14 +45,14 @@ INSERT INTO orders (product_id, quantity) VALUES (1, 10), (1, 25), (2, 15);
 
 4. Write a SQL statement that returns a result like this:
 
-   ```
-    quantity |    name
-   ----------+------------
-          10 | small bolt
-          25 | small bolt
-          15 | large bolt
+```
+ quantity |    name
+----------+------------
+       10 | small bolt
+       25 | small bolt
+       15 | large bolt
    (3 rows)
-   ```
+```
 
 ```sql
 SELECT quantity, name FROM orders
@@ -131,11 +131,13 @@ ALTER TABLE orders ALTER COLUMN product_id SET NOT NULL;
 
 8. Create a new table called `reviews` to store the data shown below. This table should include a primary key and a reference to the `products` table.
 
+```
    product  | review 
  -----------+-------------------------
  small bolt | a little small
  small bolt | very round
  large bolt | could have been smaller 
+```
 
 ```sql
 CREATE TABLE reviews (
