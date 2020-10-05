@@ -82,12 +82,10 @@ ALTER TABLE books_categories ADD UNIQUE (book_id, category_id);
    ```
 
 ```sql
-SELECT name, COUNT(books.id), string_agg(books.title, ', ') AS book_titles
+SELECT categories.name, COUNT(books.id) AS book_count, string_agg(books.title, ', ') AS book_titles
   FROM categories
- INNER JOIN books_categories
-    ON categories.id = category_id
- INNER JOIN books
-    ON books.id = book_id
- GROUP by name
- ORDER BY name;
+ INNER JOIN books_categories ON categories.id = category_id
+ INNER JOIN books ON books.id = book_id
+ GROUP by categories.name
+ ORDER BY categories.name;
 ```
